@@ -1,60 +1,31 @@
-# RAG with Gemini, ChromaDB, and Hugging Face Datasets
+# Basic RAG Pipeline with Langchain and Hugging Face
 
-This project demonstrates a basic Retrieval Augmented Generation (RAG) pipeline using:
+This repository demonstrates a simple Retrieval-Augmented Generation (RAG) pipeline using:
 
-*   **LLM:** Google Gemini API
-*   **Vector Database:** ChromaDB
-*   **Dataset:** [Name of your Hugging Face dataset] (Link to the dataset)
-*   **Language:** Python
+*   **Langchain:**  For orchestrating the RAG components.
+*   **Hugging Face Transformers:** For embedding and language modeling.
+*   **FAISS:** For efficient vector storage and similarity search.
+*   **Hugging Face Datasets:** For loading the dataset.
 
 ## Setup
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [your repository URL]
-    cd rag-gemini-chromadb
-    ```
-
-2.  **Create a virtual environment (recommended):**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate  # On Windows
-    ```
-
-3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Set up your Google Gemini API Key:**
-    *   Obtain an API key from [Google AI Studio](https://makersuite.google.com/app/apikey).
-    *   Set the environment variable `GOOGLE_API_KEY` with your key.
-        ```bash
-        export GOOGLE_API_KEY="YOUR_API_KEY"  # Linux/macOS
-        set GOOGLE_API_KEY=YOUR_API_KEY      # Windows
-        ```
+1.  Clone the repository: `git clone <your_repository_url>`
+2.  Create a virtual environment: `python -m venv venv`
+3.  Activate the environment: `source venv/bin/activate` (Linux/macOS) or `venv\Scripts\activate` (Windows)
+4.  Install dependencies: `pip install -r requirements.txt`
 
 ## Usage
 
-1.  **Run the `main.py` script:**
-    ```bash
-    python src/main.py
-    ```
+1.  Place your dataset in the `data/` directory.  Update `src/data_loader.py` to load it correctly.
+2.  Run the `main.py` script: `python src/main.py`
 
-    This script will:
-    *   Load the dataset.
-    *   Embed the text data using the Gemini API.
-    *   Create a ChromaDB database.
-    *   Index the embeddings.
-    *   Run a sample query.
+## Configuration
 
-## Example Query
-The code includes a sample query.  Feel free to modify it in `src/main.py`.
+*   Modify the `src/rag_pipeline.py` file to change the embedding model, language model, and other parameters.
 
-## Contributing
+## Dataset
 
-Contributions are welcome! Please submit a pull request.
+[Describe the dataset you are using and provide a link to it on Hugging Face Datasets if applicable.]
 
 ## License
 

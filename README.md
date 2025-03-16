@@ -23,10 +23,3 @@ This repository demonstrates a simple Retrieval-Augmented Generation (RAG) pipel
 
 *   Modify the `src/rag_pipeline.py` file to change the embedding model, language model, and other parameters.
 
-## Dataset
-
-[Describe the dataset you are using and provide a link to it on Hugging Face Datasets if applicable.]
-
-## License
-
-[Choose a license, e.g., MIT License]
